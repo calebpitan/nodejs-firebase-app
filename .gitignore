@@ -1,0 +1,6 @@
+**/node_modules
+**/.vs
+**/.vscode
+_gh_pages
+# examples
+secret/serviceAccountKey.json
