@@ -1,18 +1,6 @@
-const addSubscriber = require("./lib/db-write");
-const getSubscribers = require("./lib/db-read");
+const PORT = process.env.FIREBASE_APP_PORT || 8080
+const app = require('./app')
 
-addSubscriber({
-  email: "subscriber@example.com",
-  verified: false,
-  date: new Date().toISOString(),
-}).then(() => console.log("New subscriber added to the mailing list"));
-
-getSubscribers()
-  .then((value) => {
-    console.log("Retrieved Values:")
-    console.log(value);
-  })
-  .catch((error) => {
-    console.error("An error occured")
-    console.error(error);
-  });
+app.listen(PORT, () => {
+  console.log(`App running on  localhost:${PORT}`)
+})
