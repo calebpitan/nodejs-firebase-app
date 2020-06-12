@@ -1,4 +1,5 @@
-const PORT = process.env.FIREBASE_APP_PORT || 8080
+require('dotenv').config()
+const PORT = process.env.FIREBASE_APP_PORT || 8000
 const app = require('./app')
 
 app.listen(PORT, () => {
